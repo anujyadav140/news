@@ -1,0 +1,6 @@
+{
+    "env":{
+        "jwt_secret_key": "secret",
+        "access_token_life": "20h"
+    }
+}
