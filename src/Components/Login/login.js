@@ -23,16 +23,14 @@ function useInput(initialValue){
             username: username,
             password: password,
         }
-        axios.post('http://localhost:4000/login',loggedin).then(response => {console.log('Response:', response)
-        if(response.status ===201 || response.status ===200){
-            localStorage.setItem('token',response.data.Token); 
-            localStorage.setItem('email',response.data.email);
-            localStorage.setItem('firstname',response.data.firstName);
-            localStorage.setItem('lastname',response.data.lastName);
-            localStorage.setItem('username',response.data.username);
+        axios.post('http://localhost:4000/login',loggedin)//.then(response => {console.log('Response:', response)
+            //localStorage.setItem('token',response.data.Token); 
+            //localStorage.setItem('email',response.data.email);
+            //localStorage.setItem('firstname',response.data.firstName);
+            //localStorage.setItem('lastname',response.data.lastName);
+            //localStorage.setItem('username',response.data.username);
             history.push(`/Profile/${username}`);
-        }
-        })
+        //})
         
     }
     return(
